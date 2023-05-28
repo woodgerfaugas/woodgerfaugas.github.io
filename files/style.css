@@ -1,0 +1,476 @@
+
+/* fonts css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+/*--------------------------------------------------------------------- common css */
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1250px;
+	margin: auto;
+}
+.extra_space{
+    padding-top:56px
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	color: #000000;
+}
+
+
+
+
+/*---------------------------------------------------menubar css*/
+.header {
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 99;
+    position: fixed;
+    background-color: #ffffff;
+   
+}
+
+.header-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 4px;
+}
+.logo a h5{
+    color:#000000;
+    font-weight: 600;
+}
+.header .logo {
+	padding: 0 0px;
+   
+}
+
+.header .nav-menu {
+	padding: 0 15px;
+}
+
+.header .menu>.menu-item {
+	display: inline-block;
+	margin-left: 30px;
+	position: relative;
+}
+
+/*------------------------ if you want change the menubar typography. just change here color property */
+
+.header .menu>.menu-item>a {
+	display: block;
+	padding: 12px 0;
+	font-size:18px;
+    color:#000000;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+
+/*---------------------- if you want to change menuar list hover color, just change color property */
+
+.header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
+.header .menu>.menu-item:hover>a {
+	color: #1e030cd7;
+}
+
+
+.header .open-nav-menu {
+	height: 34px;
+	width: 40px;
+	margin-right: 15px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+
+/*--------------------- Responsive hamburger typography starts here */
+
+.header .open-nav-menu span {
+	display: block;
+	height: 3px;
+	width: 24px;
+	background-color: #000000;
+	position: relative;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before {
+	top: -7px;
+}
+
+.header .open-nav-menu span:after {
+	top: 7px;
+}
+
+.header .close-nav-menu {
+	height: 40px;
+	width: 40px;
+	background-color: #ffffff;
+	margin: 0 0 15px 15px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .close-nav-menu img {
+	width: 16px;
+}
+
+.header .menu-overlay {
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+/* srcoll up button */
+
+
+/* #btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+  }
+  .btn {
+    background-color: #149ddd;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 14px;
+} */
+
+
+/*--------------------- Responsive hamburger typography end here */
+
+/* responsive for mobile devices*/
+
+@media(max-width: 991px) {
+	.header .menu-overlay.active {
+		visibility: visible;
+		opacity: 1;
+	}
+  /*------------------ you can change background color for mobile devices */
+	.header .nav-menu {
+		position: fixed;
+		right: -280px;
+		visibility: hidden;
+		width: 280px;
+		height: 100%;
+		top: 0;
+		overflow-y: auto;
+		background-color: #ffffff;;
+		z-index: 1000;
+		padding: 15px 0;
+		transition: all 0.5s ease;
+	}
+
+	.header .nav-menu.open {
+		visibility: visible;
+		right: 0px;
+	}
+
+	.header .menu>.menu-item {
+		display: block;
+		margin: 0;
+	}
+
+	.header .menu>.menu-item-has-children>a {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	/*---------------------- you can change menubar list color and border for mobile devices */
+	.header .menu>.menu-item>a {
+        color:#000000;
+		padding: 12px 15px;
+		border-bottom: 1px solid #1e030c;
+	}
+
+	.header .menu>.menu-item:first-child>a {
+		border-top: 1px solid  #846d94;
+	}
+
+	.header .close-nav-menu,
+	.header .open-nav-menu {
+		display: flex;
+	}
+
+
+
+}
+
+
+/*--------------------------------------------------------------------------- first section css */
+.hero{
+	
+	color: #677884;
+}
+.hero p{
+	color: #4a4a4a;
+	font-size: 19px;
+}
+.inner_hero_content{
+	text-align: center;
+}
+
+.inner_hero_content h1{
+	font-size: 55px;
+	font-weight: 800;
+	
+}
+.inner_link a{
+	color:#1e030c;
+	text-decoration: underline;
+	margin-right:10px;
+	font-size: 20px;
+}
+.cover_img img{
+	width: 60%;
+}
+.selling_content h4{
+	font-weight: 700;
+	font-size: 35px;
+
+}
+
+.collapsible {
+	background-color:#ffffff;
+	color: #677884;
+	cursor: pointer;
+	padding: 10px 50px;
+	border: 1px solid #677884;
+	text-align: left;
+	outline: none;
+	font-size: 22px;
+	font-weight: 700;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  .collapsible i {
+	transition: transform 0.3s;
+  }
+
+  .collapsible:hover {
+	background-color: #677884;;
+	color: #ffffff;
+  }
+
+  .collapsible.active i {
+	transform: rotate(180deg);
+  }
+
+  .content {
+	display: none;
+	overflow: hidden;
+	transition: max-height 0.3s;
+  }
+
+
+  .content.show {
+	display: block;
+	max-height: 500px; /* Set an appropriate value */
+  }
+  .buy_now {
+    margin-top: 30px;
+}
+
+  .buy_now a {
+    background: #fff;
+	color: #677884;
+	display: inline-block;
+	padding:10px 20px;
+	font-size: 19px;
+	font-weight: 500;
+	margin-right: 15px;
+	transition:0.2s;
+}
+
+  .buy_now a:hover {
+    background: #677884;
+    color: #ffffff;
+	display: inline-block;
+	padding:10px 20px;
+	font-size: 19px;
+	font-weight: 500;
+	margin-right: 15px;
+}
+
+/*------------------------------------------------------------------- second section css */
+.collapsible_2 {
+	background-color:#ffffff;
+	color: #677884;
+	cursor: pointer;
+	padding: 10px 50px;
+	border: 1px solid #677884;
+	text-align: left;
+	outline: none;
+	font-size: 22px;
+	font-weight: 700;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  .collapsible_2:hover {
+	background-color:#c3d9dc;
+	cursor: pointer;
+	color: #677884;
+	padding: 10px 50px;
+	border: 1px solid #677884;
+	text-align: left;
+	outline: none;
+	font-size: 22px;
+	font-weight: 700;
+	transition: background-color 0.3s, color 0.3s;
+  }
+
+  .buy_now2 {
+    margin-top: 30px;
+}
+
+  .buy_now2 a {
+    background: #fff;
+    color: #677884;
+	display: inline-block;
+	padding:10px 20px;
+	font-size: 19px;
+	font-weight: 500;
+	margin-right: 15px;
+	transition:0.2s;
+}
+
+  .buy_now2 a:hover {
+    background-color:#c3d9dc;
+	color: #677884;
+	display: inline-block;
+	padding:10px 20px;
+	font-size: 19px;
+	font-weight: 500;
+	margin-right: 15px;
+}
+
+
+/*---------------------------------------------------------------------------------------- third section */
+
+
+.bio_content{
+	color: #677884;
+}
+.bio_content a{
+	
+	text-decoration: underline;
+	font-size: 17px;
+	color: #677884;
+	font-weight: 600;
+	margin-right: 10px;
+}
+.bio_content h3{
+	font-weight: 700;
+}
+.bio_content p{
+	color: #4a4a4a;
+	font-size: 16px;
+}
+
+.profile_pic img{
+	width: 70%;
+}
+
+.full_cover{
+	color:#fff6f6f9;
+}
+
+
+/*------------------------------------------------------------------------------ faq css */
+.faq_content h4{
+	color: #677884;
+	font-weight: 700;
+    font-size: 40px;
+}
+.accordion-item h6 {
+    font-weight: 600;
+	color: #677884;
+}
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 0;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+	color: #1e030c;
+    background-color: var(--bs-accordion-active-bg);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+footer{
+	color:#1e030c;
+}
+.footer_link a {
+    color: #1e030c;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+
+
+/* responsive css for mobile devices */
+@media only screen and (max-width: 667px) {
+
+     
+	.inner_hero_content h1{
+		font-size: 35px;
+		font-weight: 800;
+		
+	}
+	.selling_content h4{
+		font-size: 30px;
+		font-weight: 700;
+	}
+
+	.selling_content {
+      text-align: center;
+	}
+	.bio_content, .full_cover_space{
+		padding-left:10px;
+	}
+	.faq_content h4{
+		text-align: center;
+		font-size: 35px;
+	}
+	.profile_pic img{
+		width: 80%;
+	}
+  }
